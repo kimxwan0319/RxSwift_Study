@@ -4,26 +4,26 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>RxSwiftPlayground (Playground) 1.xcscheme</key>
+		<key>UseOperators (Playground) 1.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>6</integer>
 		</dict>
-		<key>RxSwiftPlayground (Playground) 2.xcscheme</key>
+		<key>UseOperators (Playground) 2.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>UseOperators (Playground).xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>5</integer>
-		</dict>
-		<key>RxSwiftPlayground (Playground).xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 	</dict>
 </dict>
