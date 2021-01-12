@@ -27,10 +27,19 @@ func mapExample1(){
         })
 }
 
+func filterExample1(){
+    Observable.just(["val1","val2"])
+        .map{$0.count}
+        .filter{$0 % 2 == 0}
+        .subscribe(onNext: { res in
+            print("값의 갯수가 짝수입니다.")
+        })
+}
+
 
 
 
 // MARK: - Execution
 
-mapExample1()
+filterExample1()
 
