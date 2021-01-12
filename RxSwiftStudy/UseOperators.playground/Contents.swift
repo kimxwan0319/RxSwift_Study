@@ -7,8 +7,6 @@ func justExample1(){
     Observable.just("value")
         .subscribe(onNext: { res in
             print(res)
-        }, onCompleted: {
-            print("com")
         })
         .disposed(by: disposeBag)
 }
@@ -17,10 +15,16 @@ func fromExample1(){
     Observable.from(["val1","val2"])
         .subscribe(onNext: { res in
             print(res)
-        }, onCompleted: {
-            print("com")
         })
         .disposed(by: disposeBag)
+}
+
+func mapExample1(){
+    Observable.just(["val1","val2"])
+        .map{$0.count}
+        .subscribe(onNext: { res in
+            print(res)
+        })
 }
 
 
@@ -28,5 +32,5 @@ func fromExample1(){
 
 // MARK: - Execution
 
-fromExample1()
+mapExample1()
 
