@@ -48,10 +48,30 @@ func mergeExample1(){
         })
 }
 
+func zipExample1(){
+    //두 Observable의 값들을 한쌍씩 묶어서 내려보낸다.
+    //쌍이 맞지 않을땐 값이 내려가지 않는다.
+    
+    let XOB = Observable.from(["XVal1","XVal2","XVal3","XVal4"])
+    let YOB = Observable.from(["YVal1","YVal2","YVal3"])
+    
+    Observable.zip(XOB, YOB)
+        .subscribe(onNext: { res in
+            print(res)
+        })
+    
+    /*
+     ------result------
+     
+     ("XVal1", "YVal1")
+     ("XVal2", "YVal2")
+     ("XVal3", "YVal3")
+     */
+}
 
 
 
 // MARK: - Execution
 
-mergeExample1()
+zipExample1()
 
