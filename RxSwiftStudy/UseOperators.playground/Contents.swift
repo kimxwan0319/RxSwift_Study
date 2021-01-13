@@ -25,6 +25,7 @@ func mapExample1(){
         .subscribe(onNext: { res in
             print(res)
         })
+        .disposed(by: disposeBag)
 }
 
 func filterExample1(){
@@ -34,6 +35,17 @@ func filterExample1(){
         .subscribe(onNext: { res in
             print("값의 갯수가 짝수입니다.")
         })
+        .disposed(by: disposeBag)
+}
+
+func mergeExample1(){
+    let XOB = Observable.from(["XVal1","XVal2","XVal3","XVal4"])
+    let YOB = Observable.from(["YVal1","YVal2","YVal3"])
+    
+    Observable.merge(XOB, YOB)
+        .subscribe(onNext: { res in
+            print(res)
+        })
 }
 
 
@@ -41,5 +53,5 @@ func filterExample1(){
 
 // MARK: - Execution
 
-filterExample1()
+mergeExample1()
 
