@@ -46,6 +46,8 @@ func filterExample1(){
 }
 
 func mergeExample1(){
+    //두 Observable의 값들을 차례대로 내린다.
+    
     let XOB = Observable.from(["XVal1","XVal2","XVal3","XVal4"])
     let YOB = Observable.from(["YVal1","YVal2","YVal3"])
     
@@ -53,6 +55,18 @@ func mergeExample1(){
         .subscribe(onNext: { res in
             print(res)
         })
+    
+    /*
+     ------result------
+     
+     XVal1
+     YVal1
+     XVal2
+     YVal2
+     XVal3
+     YVal3
+     XVal4
+     */
 }
 
 func zipExample1(){
@@ -76,9 +90,32 @@ func zipExample1(){
      */
 }
 
+func combinelatestExample1(){
+    //zip과 달리 쌍이 맞지 않을때 가장 최근의 값과 쌍을맺어 내려보낸다.
+    
+    let XOB = Observable.from(["XVal1","XVal2","XVal3","XVal4"])
+    let YOB = Observable.from(["YVal1","YVal2","YVal3"])
+    
+    Observable.combineLatest(XOB, YOB)
+        .subscribe(onNext: { res in
+            print(res)
+        })
+    
+    /*
+     ------result------
+     
+     ("XVal1", "YVal1")
+     ("XVal2", "YVal1")
+     ("XVal2", "YVal2")
+     ("XVal3", "YVal2")
+     ("XVal3", "YVal3")
+     ("XVal4", "YVal3")
+     */
+}
+
 
 
 // MARK: - Execution
 
-justExample1()
+mergeExample1()
 
