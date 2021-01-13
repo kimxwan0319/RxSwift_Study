@@ -5,6 +5,7 @@ var disposeBag = DisposeBag()
 
 func justExample1(){
     //값을 한번에 내려보낼때 사용
+    
     Observable.just("value")
         .subscribe(onNext: { res in
             print(res)
@@ -15,27 +16,49 @@ func justExample1(){
      ------result------
      
      value
+     
      */
 }
 
 func fromExample1(){
+    //배열로 들어온 값들을 한개씩 내려보낸다.
+    
     Observable.from(["val1","val2"])
         .subscribe(onNext: { res in
             print(res)
         })
         .disposed(by: disposeBag)
+    
+    /*
+     ------result------
+     
+     val1
+     val2
+     
+     */
 }
 
 func mapExample1(){
+    //내려오는 값을 변화시킬 수 있다.
+    
     Observable.just(["val1","val2"])
         .map{$0.count}
         .subscribe(onNext: { res in
             print(res)
         })
         .disposed(by: disposeBag)
+    
+    /*
+     ------result------
+     
+     2
+     
+     */
 }
 
 func filterExample1(){
+    //filter의 식이 참일때만 onNext로 값이 전달된다.
+    
     Observable.just(["val1","val2"])
         .map{$0.count}
         .filter{$0 % 2 == 0}
@@ -43,6 +66,13 @@ func filterExample1(){
             print("값의 갯수가 짝수입니다.")
         })
         .disposed(by: disposeBag)
+    
+    /*
+     ------result------
+     
+     값의 갯수가 짝수입니다.
+     
+     */
 }
 
 func mergeExample1(){
@@ -66,6 +96,7 @@ func mergeExample1(){
      XVal3
      YVal3
      XVal4
+     
      */
 }
 
@@ -87,6 +118,7 @@ func zipExample1(){
      ("XVal1", "YVal1")
      ("XVal2", "YVal2")
      ("XVal3", "YVal3")
+     
      */
 }
 
@@ -110,6 +142,7 @@ func combinelatestExample1(){
      ("XVal3", "YVal2")
      ("XVal3", "YVal3")
      ("XVal4", "YVal3")
+     
      */
 }
 
@@ -117,5 +150,5 @@ func combinelatestExample1(){
 
 // MARK: - Execution
 
-mergeExample1()
+filterExample1()
 
