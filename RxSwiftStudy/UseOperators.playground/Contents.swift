@@ -4,11 +4,18 @@ import RxSwift
 var disposeBag = DisposeBag()
 
 func justExample1(){
+    //값을 한번에 내려보낼때 사용
     Observable.just("value")
         .subscribe(onNext: { res in
             print(res)
         })
         .disposed(by: disposeBag)
+    
+    /*
+     ------result------
+     
+     value
+     */
 }
 
 func fromExample1(){
@@ -73,5 +80,5 @@ func zipExample1(){
 
 // MARK: - Execution
 
-zipExample1()
+justExample1()
 
