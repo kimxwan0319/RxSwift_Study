@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		925C9EDA25B15F4E005A3694 /* AdderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C9ED925B15F4E005A3694 /* AdderViewController.swift */; };
 		92D9CEF925AAE234000873CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9CEF825AAE234000873CF /* AppDelegate.swift */; };
 		92D9CEFB25AAE234000873CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9CEFA25AAE234000873CF /* SceneDelegate.swift */; };
 		92D9CF0025AAE234000873CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D9CEFE25AAE234000873CF /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		1C42FB5AEA78A39B5E369498 /* Pods-RxSwiftStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftStudy.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftStudy/Pods-RxSwiftStudy.debug.xcconfig"; sourceTree = "<group>"; };
 		8F532C3CD91566062754F8E9 /* Pods_RxSwiftStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		925C9ED925B15F4E005A3694 /* AdderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdderViewController.swift; sourceTree = "<group>"; };
 		92D9CEF525AAE234000873CF /* RxSwiftStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D9CEF825AAE234000873CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92D9CEFA25AAE234000873CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		925C9ED825B15F2F005A3694 /* adder */ = {
+			isa = PBXGroup;
+			children = (
+				925C9ED925B15F4E005A3694 /* AdderViewController.swift */,
+			);
+			path = adder;
+			sourceTree = "<group>";
+		};
 		92D9CEEC25AAE234000873CF = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +92,7 @@
 		92D9CEF725AAE234000873CF /* RxSwiftStudy */ = {
 			isa = PBXGroup;
 			children = (
+				925C9ED825B15F2F005A3694 /* adder */,
 				92D9CF2D25AAF190000873CF /* HelloWorld */,
 				92D9CF1C25AAEB04000873CF /* LoginExample */,
 				92D9CF1B25AAEADF000873CF /* Common */,
@@ -232,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				925C9EDA25B15F4E005A3694 /* AdderViewController.swift in Sources */,
 				92D9CF2325AAEBC6000873CF /* LoginViewController.swift in Sources */,
 				92D9CEF925AAE234000873CF /* AppDelegate.swift in Sources */,
 				92D9CEFB25AAE234000873CF /* SceneDelegate.swift in Sources */,

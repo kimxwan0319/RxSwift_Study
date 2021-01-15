@@ -150,5 +150,5 @@ func combinelatestExample1(){
 
 // MARK: - Execution
 
-filterExample1()
+combinelatestExample1()
 
